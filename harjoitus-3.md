@@ -1,6 +1,6 @@
 
 
-# Harjoitus 3 c)
+# Harjoitus 3
 
 
 c)
@@ -28,6 +28,17 @@ Laitetaan järjestelmä muistamaan salasana tunniksi.
 
 Eli ajetaan tämä komento: 
 git config --global credential.helper "cache --timeout=3600"
+
+---
+
+d)
+
+Siirrettiin /srv/salt/ kansion tiedostot git repoon omaan kansioon. 
+
+Srv kansiossa ajettiin komento:
+sudo cp salt /home/superuser/Salt
+Muutettiin vielä kansion nimeä.
+sudo mv salt salt-files
 
 
 
