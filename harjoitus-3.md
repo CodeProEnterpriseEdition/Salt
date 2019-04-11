@@ -1,6 +1,6 @@
 
 
-# Harjoitus 3
+# Harjoitus 3 c)
 
 
 c)
@@ -32,6 +32,7 @@ git config --global credential.helper "cache --timeout=3600"
 
 
 
-
+---
+tätä ei vielä toteutettu.
 Kirjaudutaan githubiin ja asetetaan public key, helpottaakseen kirjautumista
 mennään profiiliin ja klikataan ssh and G
