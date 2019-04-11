@@ -23,10 +23,15 @@ Lisätään raportti itedosto git repoon.
   git pull
   git push
 
+Laitetaan järjestelmä muistamaan salasana tunniksi.
+(ohjeet täältä http://terokarvinen.com/2016/publish-your-project-with-github)
+
+Eli ajetaan tämä komento: 
+git config --global credential.helper "cache --timeout=3600"
+
 
 
 
 
 Kirjaudutaan githubiin ja asetetaan public key, helpottaakseen kirjautumista
-mennään profiiliin ja klikataan ssh and GpC keys.
-
+mennään profiiliin ja klikataan ssh and G
