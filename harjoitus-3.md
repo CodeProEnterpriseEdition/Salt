@@ -40,8 +40,20 @@ sudo cp salt /home/superuser/Salt
 Muutettiin vielä kansion nimeä.
 sudo mv salt salt-files
 
+git add . 
+git commit -m "save"
+git push
 
+poistetaan nyt salt kansio missä tiedot on ja haetaan se uudestaan clone komennolla.
 
+cd ..
+sudo rm -r /Salt
+
+-todetaan että kansiota ei ole.
+
+git clone repo-url
+Mennään takaisin haluttuun kansioon tarkistamaan että tiedot ovat taas takaisin.
+cd Salt
 
 ---
 tätä ei vielä toteutettu.
