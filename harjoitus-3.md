@@ -130,18 +130,42 @@ harjoitus-3.md  LICENSE  README.md  salt-files
 
 # f) Tee uusi salt-moduli. Voit asentaa ja konfiguroida minkä vain uuden ohjelman: demonin, työpöytäohjelman tai komentokehotteesta toimivan ohjelman. Käytä tarvittaessa ‘find -printf “%T+ %p\n”|sort’ löytääksesi uudet asetustiedostot.
 
-Luodaan kansio jossa hello world tiedosto.
+Luodaan hello-world.txt tiedosto.
 
-Luodaan hello-world kansio Salt kansioon.
-
-mkdir hello-world
+"Hello world!!"
 
 Luodaan hello-world.sls tiedosto
 
+kaikki /srv/salt/ kansioon.
 
 
 Lisätään top.sls tiedostoon - hello-world rivi.
 
+Ajetaan komento tilan päivittämiseksi.
+
+superuser@blackbox:/srv/salt$ sudo salt 'cloudworker-2' state.apply hello-world
+cloudworker-2:
+----------
+          ID: /hello-world
+    Function: file.managed
+      Result: True
+     Comment: File /hello-world updated
+     Started: 19:39:36.227107
+    Duration: 281.497 ms
+     Changes:   
+              ----------
+              diff:
+                  New file
+              mode:
+                  0644
+
+Summary for cloudworker-2
+------------
+Succeeded: 1 (changed=1)
+Failed:    0
+------------
+Total states run:     1
+Total run time: 281.497 ms
 
 
 
