@@ -120,6 +120,17 @@ ad5919e1 (pentti korpela    2019-04-11 22:24:34 +0300  10)
 
 # e) Tee tyhmä muutos gittiin, älä tee commit:tia. Tuhoa huonot muutokset ‘git reset –hard’. Huomaa, että tässä toiminnossa ei ole peruutusnappia.
 
+superuser@blackbox:~/Salt$ ls
+harjoitus-3.md  hemuli  LICENSE  README.md  salt-files
+superuser@blackbox:~/Salt$ git reset --hard
+HEAD is now at 0b1da8d save
+superuser@blackbox:~/Salt$ ls
+harjoitus-3.md  LICENSE  README.md  salt-files
+
+
+# f) Tee uusi salt-moduli. Voit asentaa ja konfiguroida minkä vain uuden ohjelman: demonin, työpöytäohjelman tai komentokehotteesta toimivan ohjelman. Käytä tarvittaessa ‘find -printf “%T+ %p\n”|sort’ löytääksesi uudet asetustiedostot.
+
+
 
 
 
