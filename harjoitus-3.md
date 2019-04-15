@@ -29,10 +29,6 @@ Laitetaan järjestelmä muistamaan salasana tunniksi.
 Eli ajetaan tämä komento: 
 git config --global credential.helper "cache --timeout=3600"
 
----
-
-d)
-
 Siirrettiin /srv/salt/ kansion tiedostot git repoon omaan kansioon. 
 
 Srv kansiossa ajettiin komento:
@@ -54,6 +50,74 @@ sudo rm -r /Salt
 git clone repo-url
 Mennään takaisin haluttuun kansioon tarkistamaan että tiedot ovat taas takaisin.
 cd Salt
+
+-----
+
+# d) Näytä omalla salt-varastollasi esimerkit komennoista ‘git log’, ‘git diff’ ja ‘git blame’. Selitä tulokset.
+
+Git log näyttää commit historian.
+
+superuser@blackbox:~/Salt$ git log
+commit 0e127aa8f83b7e5f2a9dbc9e23a3b01ca5514fe8 (HEAD -> master, origin/master, origin/HEAD)
+Author: pentti korpela <pentti.korpela@myy.haaga-helia.fi>
+Date:   Mon Apr 15 21:15:11 2019 +0300
+
+    save
+
+commit 38e05ffce2e0ead787944bbe4b6309ecb02cbf03
+Author: pentti korpela <pentti.korpela@myy.haaga-helia.fi>
+Date:   Mon Apr 15 21:07:58 2019 +0300
+
+    save
+
+Git diff niin nähdään mitä uusia muutoksia on tehty viimeisimmän commitin jälkeen.
+Terminaalissa poistetut rivit näkyvät punaisella ja niiden edessä on miinusmerkki - .
+Lisätyt rivit vihreällä ja niiden edessä + merkki. 
+
+superuser@blackbox:~/Salt$ git diff
+diff --git a/harjoitus-3.md b/harjoitus-3.md
+index 54af503..6778bb9 100644
+--- a/harjoitus-3.md
++++ b/harjoitus-3.md
+@@ -29,10 +29,6 @@ Laitetaan järjestelmä muistamaan salasana tunniksi.
+ Eli ajetaan tämä komento: 
+ git config --global credential.helper "cache --timeout=3600"
+ 
+----
+-
+-d)
+-
+ Siirrettiin /srv/salt/ kansion tiedostot git repoon omaan kansioon. 
+ 
+ Srv kansiossa ajettiin komento:
+@@ -55,6 +51,29 @@ git clone repo-url
+ Mennään takaisin haluttuun kansioon tarkistamaan että tiedot ovat taas takaisin.
+ cd Salt
+ 
++-----
++
++# d) Näytä omalla salt-varastollasi esimerkit komennoista ‘git log’, ‘git diff’ ja ‘git blame’. Selitä tulokset.
++
++Git log näyttää commit historian.
++
+
+
+
+Git blame "tiedoston nimi" antaa tiedot jokaisesta rivistä kuka on muokannut ja milloin. 
+
+superuser@blackbox:~/Salt$ git blame harjoitus-3.md
+ad5919e1 (pentti korpela    2019-04-11 22:24:34 +0300   1) 
+ad5919e1 (pentti korpela    2019-04-11 22:24:34 +0300   2) 
+be704ee4 (pentti korpela    2019-04-11 22:52:31 +0300   3) # Harjoitus 3
+ad5919e1 (pentti korpela    2019-04-11 22:24:34 +0300   4) 
+ad5919e1 (pentti korpela    2019-04-11 22:24:34 +0300   5) 
+ad5919e1 (pentti korpela    2019-04-11 22:24:34 +0300   6) c)
+ad5919e1 (pentti korpela    2019-04-11 22:24:34 +0300   7) 
+ad5919e1 (pentti korpela    2019-04-11 22:24:34 +0300   8) Kirjaudutaan githubiin ja luodaan uusi projekti joka nimetään Salt:ksi.
+ad5919e1 (pentti korpela    2019-04-11 22:24:34 +0300   9) Valitaan että uuteen repoon luodaan readme tiedosto.
+ad5919e1 (pentti korpela    2019-04-11 22:24:34 +0300  10) 
+
+
 
 ---
 tätä ei vielä toteutettu.
