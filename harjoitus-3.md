@@ -118,6 +118,10 @@ ad5919e1 (pentti korpela    2019-04-11 22:24:34 +0300   9) Valitaan että uuteen
 ad5919e1 (pentti korpela    2019-04-11 22:24:34 +0300  10) 
 
 
+# e) Tee tyhmä muutos gittiin, älä tee commit:tia. Tuhoa huonot muutokset ‘git reset –hard’. Huomaa, että tässä toiminnossa ei ole peruutusnappia.
+
+
+
 
 ---
 tätä ei vielä toteutettu.
