@@ -4,3 +4,4 @@ base:
     - sshd
     - apache
     - sysstat
+    - hello-world

@@ -130,6 +130,18 @@ harjoitus-3.md  LICENSE  README.md  salt-files
 
 # f) Tee uusi salt-moduli. Voit asentaa ja konfiguroida minkä vain uuden ohjelman: demonin, työpöytäohjelman tai komentokehotteesta toimivan ohjelman. Käytä tarvittaessa ‘find -printf “%T+ %p\n”|sort’ löytääksesi uudet asetustiedostot.
 
+Luodaan kansio jossa hello world tiedosto.
+
+Luodaan hello-world kansio Salt kansioon.
+
+mkdir hello-world
+
+Luodaan hello-world.sls tiedosto
+
+
+
+Lisätään top.sls tiedostoon - hello-world rivi.
+
 
 
 
