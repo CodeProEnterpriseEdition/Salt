@@ -104,11 +104,15 @@ ad5919e1 (pentti korpela    2019-04-11 22:24:34 +0300  10)
 
 # d) Tee tyhmä muutos gittiin, älä tee commit:tia. Tuhoa huonot muutokset ‘git reset –hard’. Huomaa, että tässä toiminnossa ei ole peruutusnappia.
 
-superuser@blackbox:/Salt$ ls
+Poistetaan comittaamaton tiedosto git reset hardilla.
+
+       ls
 harjoitus-3.md  hemuli  LICENSE  README.md  salt-files
-superuser@blackbox:~/Salt$ git reset --hard
+   
+       git reset --hard
 HEAD is now at 0b1da8d save
-superuser@blackbox:~/Salt$ ls
+
+       ls
 harjoitus-3.md  LICENSE  README.md  salt-files
 
 
