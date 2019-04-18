@@ -86,25 +86,6 @@ index 54af503..6778bb9 100644
  Eli ajetaan tämä komento: 
  git config --global credential.helper "cache --timeout=3600"
  
-----
-
- Siirrettiin /srv/salt/ kansion tiedostot git repoon omaan kansioon. 
- 
- Srv kansiossa ajettiin komento:
- 
-       git clone repo-url
- Mennään takaisin haluttuun kansioon tarkistamaan että tiedot ovat taas takaisin.
- 
-       cd Salt
- 
-+-----
-+
-
-+
-+Git log näyttää commit historian.
-+
-
-
 
 Git blame "tiedoston nimi" antaa tiedot jokaisesta rivistä kuka on muokannut ja milloin. 
 
@@ -172,8 +153,3 @@ Total run time: 281.497 ms
 
 
 
-
----
-tätä ei vielä toteutettu.
-Kirjaudutaan githubiin ja asetetaan public key, helpottaakseen kirjautumista
-mennään profiiliin ja klikataan ssh and G
