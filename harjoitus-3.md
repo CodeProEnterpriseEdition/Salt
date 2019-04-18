@@ -26,13 +26,16 @@ Laitetaan järjestelmä muistamaan salasana tunniksi.
 (ohjeet täältä http://terokarvinen.com/2016/publish-your-project-with-github)
 
 Eli ajetaan tämä komento: 
-        git config --global credential.helper "cache --timeout=3600"
+        
+       git config --global credential.helper "cache --timeout=3600"
 
 Siirrettiin /srv/salt/ kansion tiedostot git repoon omaan kansioon. 
 
 Srv kansiossa ajettiin komento:
+
        sudo cp salt /home/superuser/Salt
 Muutettiin vielä kansion nimeä.
+
        sudo mv salt salt-files
 
        git add . 
@@ -48,6 +51,7 @@ poistetaan nyt salt kansio missä tiedot on ja haetaan se uudestaan clone komenn
 
        git clone repo-url
 Mennään takaisin haluttuun kansioon tarkistamaan että tiedot ovat taas takaisin.
+
        cd Salt
 
 -----
@@ -83,19 +87,19 @@ index 54af503..6778bb9 100644
  git config --global credential.helper "cache --timeout=3600"
  
 ----
--
--d)
--
+
  Siirrettiin /srv/salt/ kansion tiedostot git repoon omaan kansioon. 
  
  Srv kansiossa ajettiin komento:
-@@ -55,6 +51,29 @@ git clone repo-url
+ 
+       git clone repo-url
  Mennään takaisin haluttuun kansioon tarkistamaan että tiedot ovat taas takaisin.
- cd Salt
+ 
+       cd Salt
  
 +-----
 +
-+# d) Näytä omalla salt-varastollasi esimerkit komennoista ‘git log’, ‘git diff’ ja ‘git blame’. Selitä tulokset.
+
 +
 +Git log näyttää commit historian.
 +
@@ -117,7 +121,7 @@ ad5919e1 (pentti korpela    2019-04-11 22:24:34 +0300   9) Valitaan että uuteen
 ad5919e1 (pentti korpela    2019-04-11 22:24:34 +0300  10) 
 
 
-# e) Tee tyhmä muutos gittiin, älä tee commit:tia. Tuhoa huonot muutokset ‘git reset –hard’. Huomaa, että tässä toiminnossa ei ole peruutusnappia.
+# d) Tee tyhmä muutos gittiin, älä tee commit:tia. Tuhoa huonot muutokset ‘git reset –hard’. Huomaa, että tässä toiminnossa ei ole peruutusnappia.
 
 superuser@blackbox:~/Salt$ ls
 harjoitus-3.md  hemuli  LICENSE  README.md  salt-files
@@ -127,7 +131,7 @@ superuser@blackbox:~/Salt$ ls
 harjoitus-3.md  LICENSE  README.md  salt-files
 
 
-# f) Tee uusi salt-moduli. Voit asentaa ja konfiguroida minkä vain uuden ohjelman: demonin, työpöytäohjelman tai komentokehotteesta toimivan ohjelman. Käytä tarvittaessa ‘find -printf “%T+ %p\n”|sort’ löytääksesi uudet asetustiedostot.
+# e) Tee uusi salt-moduli. Voit asentaa ja konfiguroida minkä vain uuden ohjelman: demonin, työpöytäohjelman tai komentokehotteesta toimivan ohjelman. Käytä tarvittaessa ‘find -printf “%T+ %p\n”|sort’ löytääksesi uudet asetustiedostot.
 
 Luodaan hello-world.txt tiedosto.
 
