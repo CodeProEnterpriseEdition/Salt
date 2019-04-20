@@ -2,10 +2,7 @@ sudo apt-get update
 
 sudo apt-get install salt-minion
 
-cd /etc/salt/
-
-sudo sed -i '1s/^/master: ip /' minion
-sudo sed -i '1s/^/id: other-slave /' minion
+echo 'master: localhost \n id: other-minion '|sudo tee /etc/salt/minion
 
 
 setxkbmap fi
