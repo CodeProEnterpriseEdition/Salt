@@ -2,6 +2,9 @@ sudo apt-get update
 
 sudo apt-get install salt-minion
 
+echo "line 1" >> greetings.txt
+echo "line 2" >> greetings.txt
+
 echo 'master: localhost \n id: other-minion '|sudo tee /etc/salt/minion
 
 
