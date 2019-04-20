@@ -3,7 +3,6 @@
 # Harjoitus 3
 
 
-c)
 
 Kirjaudutaan githubiin ja luodaan uusi projekti joka nimetään Salt:ksi.
 Valitaan että uuteen repoon luodaan readme tiedosto.
@@ -12,48 +11,52 @@ Nyt klikataan clone or download nappia joka on vihreällä taustalla.
 ja otetaan siitä urli talteen.
 
 Nyt terminaalissa komento kloonaa git repon omalle koneelle.
-  git clone https://github.com/CodeProEnterpriseEdition/Salt.git
+       git clone https://github.com/CodeProEnterpriseEdition/Salt.git
 
 Luodaan harjoitus-3.md tiedosto mihin kirjataan raportti.
 
 Lisätään raportti itedosto git repoon.
 
-  git add . 
-  git commit -m "add harjoitus-3 file"
-  git pull
-  git push
+       git add . 
+       git commit -m "add harjoitus-3 file"
+       git pull
+       git push
 
 Laitetaan järjestelmä muistamaan salasana tunniksi.
 (ohjeet täältä http://terokarvinen.com/2016/publish-your-project-with-github)
 
 Eli ajetaan tämä komento: 
-git config --global credential.helper "cache --timeout=3600"
+        
+       git config --global credential.helper "cache --timeout=3600"
 
 Siirrettiin /srv/salt/ kansion tiedostot git repoon omaan kansioon. 
 
 Srv kansiossa ajettiin komento:
-sudo cp salt /home/superuser/Salt
-Muutettiin vielä kansion nimeä.
-sudo mv salt salt-files
 
-git add . 
-git commit -m "save"
-git push
+       sudo cp salt /home/superuser/Salt
+Muutettiin vielä kansion nimeä.
+
+       sudo mv salt salt-files
+
+       git add . 
+       git commit -m "save"
+       git push
 
 poistetaan nyt salt kansio missä tiedot on ja haetaan se uudestaan clone komennolla.
 
-cd ..
-sudo rm -r /Salt
+       cd ..
+       sudo rm -r /Salt
 
 -todetaan että kansiota ei ole.
 
-git clone repo-url
+       git clone repo-url
 Mennään takaisin haluttuun kansioon tarkistamaan että tiedot ovat taas takaisin.
-cd Salt
+
+       cd Salt
 
 -----
 
-# d) Näytä omalla salt-varastollasi esimerkit komennoista ‘git log’, ‘git diff’ ja ‘git blame’. Selitä tulokset.
+# c) Näytä omalla salt-varastollasi esimerkit komennoista ‘git log’, ‘git diff’ ja ‘git blame’. Selitä tulokset.
 
 Git log näyttää commit historian.
 
@@ -62,13 +65,13 @@ commit 0e127aa8f83b7e5f2a9dbc9e23a3b01ca5514fe8 (HEAD -> master, origin/master, 
 Author: pentti korpela <pentti.korpela@myy.haaga-helia.fi>
 Date:   Mon Apr 15 21:15:11 2019 +0300
 
-    save
+save
 
 commit 38e05ffce2e0ead787944bbe4b6309ecb02cbf03
 Author: pentti korpela <pentti.korpela@myy.haaga-helia.fi>
 Date:   Mon Apr 15 21:07:58 2019 +0300
 
-    save
+save
 
 Git diff niin nähdään mitä uusia muutoksia on tehty viimeisimmän commitin jälkeen.
 Terminaalissa poistetut rivit näkyvät punaisella ja niiden edessä on miinusmerkki - .
@@ -83,25 +86,6 @@ index 54af503..6778bb9 100644
  Eli ajetaan tämä komento: 
  git config --global credential.helper "cache --timeout=3600"
  
-----
--
--d)
--
- Siirrettiin /srv/salt/ kansion tiedostot git repoon omaan kansioon. 
- 
- Srv kansiossa ajettiin komento:
-@@ -55,6 +51,29 @@ git clone repo-url
- Mennään takaisin haluttuun kansioon tarkistamaan että tiedot ovat taas takaisin.
- cd Salt
- 
-+-----
-+
-+# d) Näytä omalla salt-varastollasi esimerkit komennoista ‘git log’, ‘git diff’ ja ‘git blame’. Selitä tulokset.
-+
-+Git log näyttää commit historian.
-+
-
-
 
 Git blame "tiedoston nimi" antaa tiedot jokaisesta rivistä kuka on muokannut ja milloin. 
 
@@ -118,17 +102,23 @@ ad5919e1 (pentti korpela    2019-04-11 22:24:34 +0300   9) Valitaan että uuteen
 ad5919e1 (pentti korpela    2019-04-11 22:24:34 +0300  10) 
 
 
-# e) Tee tyhmä muutos gittiin, älä tee commit:tia. Tuhoa huonot muutokset ‘git reset –hard’. Huomaa, että tässä toiminnossa ei ole peruutusnappia.
+# d) Tee tyhmä muutos gittiin, älä tee commit:tia. Tuhoa huonot muutokset ‘git reset –hard’. Huomaa, että tässä toiminnossa ei ole peruutusnappia.
 
-superuser@blackbox:~/Salt$ ls
+Poistetaan comittaamaton tiedosto git reset hardilla.
+
+       ls
 harjoitus-3.md  hemuli  LICENSE  README.md  salt-files
-superuser@blackbox:~/Salt$ git reset --hard
+   
+       git reset --hard
 HEAD is now at 0b1da8d save
-superuser@blackbox:~/Salt$ ls
+
+       ls
 harjoitus-3.md  LICENSE  README.md  salt-files
 
 
-# f) Tee uusi salt-moduli. Voit asentaa ja konfiguroida minkä vain uuden ohjelman: demonin, työpöytäohjelman tai komentokehotteesta toimivan ohjelman. Käytä tarvittaessa ‘find -printf “%T+ %p\n”|sort’ löytääksesi uudet asetustiedostot.
+# e) Tee uusi salt-moduli. Voit asentaa ja konfiguroida minkä vain uuden ohjelman: demonin, työpöytäohjelman tai komentokehotteesta toimivan ohjelman. Käytä tarvittaessa ‘find -printf “%T+ %p\n”|sort’ löytääksesi uudet asetustiedostot.
+
+  -  Tässä tuli jotain virhettä mitä en muistanut kirjata ylös. Ei toimi.
 
 Luodaan hello-world.txt tiedosto.
 
@@ -169,8 +159,3 @@ Total run time: 281.497 ms
 
 
 
-
----
-tätä ei vielä toteutettu.
-Kirjaudutaan githubiin ja asetetaan public key, helpottaakseen kirjautumista
-mennään profiiliin ja klikataan ssh and G
