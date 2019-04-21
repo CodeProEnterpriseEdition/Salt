@@ -9,7 +9,7 @@ cd /etc/salt/
 sudo sed -i '1s/^/master: 62.78.244.33/' minion
 sudo sed -i '1s/^/id: test-slave/' minion
 
-
+sudo systemctl restart salt-minion
 
 
 
