@@ -6,7 +6,7 @@ sudo add-apt-repository universe
 sudo apt-get -y install git salt-minion
 
 echo "master: 207.154.246.100
-id: worker-slave"$((RANDOM%1000)) |sudo tee /etc/salt/hemuli
+id: worker-slave"$((RANDOM%1000)) |sudo tee /etc/salt/minion
 
 
 sudo systemctl restart salt-minion
