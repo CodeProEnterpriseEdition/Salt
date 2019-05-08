@@ -1,0 +1,15 @@
+#!/bin/bash
+
+
+sudo apt-get update
+
+sudo add-apt-repository universe
+
+sudo apt-get -y install git salt-minion
+
+
+cd /etc/salt/
+sudo sed -i '1s/^/master: 207.154.246.100 \n/' minion
+sudo sed -i '2s/^/id: worker-slave \n/' minion
+
+sudo systemctl restart salt-minion
